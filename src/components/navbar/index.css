@@ -1,18 +1,81 @@
 .navbar {
   display: flex;
 }
+.toggle ul {
+  transition: 0.5s;
+}
 .navbar ul li {
   list-style: none;
   display: flex;
+  align-items: center;
   gap: 0px 20px;
 }
-.navbar ul li a {
+.navbar ul li a,
+.toggle ul li a {
   font-size: 20px;
   font-weight: 200;
   text-decoration: none;
   color: white;
   transition: 0.5s;
 }
-.navbar ul li a:hover {
+.navbar ul li a:hover,
+.toggle ul li a:hover {
   color: chartreuse;
+}
+.btn-toggle,
+.btn-close {
+  color: white;
+  font-size: 25px;
+  transition: 0.5s;
+  display: none;
+  align-items: center;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.btn-toggle:hover {
+  color: chartreuse;
+}
+.toggle {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 70vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.toggle .btn-close {
+  font-size: 28px;
+  display: flex;
+  position: absolute;
+  top: 10px;
+  left: -60px;
+}
+.toggle ul {
+  position: relative;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+.toggle ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px 0px;
+  list-style: none;
+  align-items: center;
+}
+
+.toggle ul li a {
+  font-size: 30px;
+}
+
+@media (max-width: 700px) {
+  .navbar {
+    display: none;
+  }
+  .btn-toggle {
+    display: flex;
+  }
 }

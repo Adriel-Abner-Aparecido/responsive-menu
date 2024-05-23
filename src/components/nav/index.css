@@ -5,3 +5,8 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 700px) {
+  nav {
+    width: 90%;
+  }
+}
